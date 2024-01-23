@@ -1001,6 +1001,9 @@ typedef enum
 }
 surfaceType_t;
 
+#ifndef MAIN_C
+extern
+#endif
 char            *surfaceTypes[ NUM_SURFACE_TYPES ]
 #ifndef MAIN_C
 ;
@@ -2019,7 +2022,7 @@ Q_EXTERN float jitters[ MAX_JITTERS ];
 
 
 /* commandline arguments */
-Q_EXTERN qboolean verbose;
+extern qboolean verbose;
 Q_EXTERN qboolean verboseEntities Q_ASSIGN( qfalse );
 Q_EXTERN qboolean force Q_ASSIGN( qfalse );
 Q_EXTERN qboolean infoMode Q_ASSIGN( qfalse );
